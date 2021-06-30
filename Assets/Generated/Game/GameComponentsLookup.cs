@@ -15,19 +15,26 @@ public static class GameComponentsLookup {
     public const int DebugLog = 4;
     public const int Hero = 5;
     public const int isDropped = 6;
-    public const int isTaken2Battle = 7;
-    public const int Item = 8;
-    public const int ItemInBag = 9;
-    public const int ItemIndex = 10;
-    public const int Position = 11;
-    public const int Skill = 12;
-    public const int SkillIndex = 13;
-    public const int Speed = 14;
-    public const int Sprite = 15;
-    public const int Velocity = 16;
-    public const int View = 17;
+    public const int isPlayer = 7;
+    public const int isTaken2Battle = 8;
+    public const int Item = 9;
+    public const int ItemInBag = 10;
+    public const int ItemIndex = 11;
+    public const int Lifetime = 12;
+    public const int Phyexp = 13;
+    public const int Phylevel = 14;
+    public const int Position = 15;
+    public const int Skill = 16;
+    public const int SkillInBag = 17;
+    public const int SkillIndex = 18;
+    public const int Speed = 19;
+    public const int Spexp = 20;
+    public const int Splevel = 21;
+    public const int Sprite = 22;
+    public const int Velocity = 23;
+    public const int View = 24;
 
-    public const int TotalComponents = 18;
+    public const int TotalComponents = 25;
 
     public static readonly string[] componentNames = {
         "CharacterGender",
@@ -37,14 +44,21 @@ public static class GameComponentsLookup {
         "DebugLog",
         "Hero",
         "isDropped",
+        "isPlayer",
         "isTaken2Battle",
         "Item",
         "ItemInBag",
         "ItemIndex",
+        "Lifetime",
+        "Phyexp",
+        "Phylevel",
         "Position",
         "Skill",
+        "SkillInBag",
         "SkillIndex",
         "Speed",
+        "Spexp",
+        "Splevel",
         "Sprite",
         "Velocity",
         "View"
@@ -58,14 +72,21 @@ public static class GameComponentsLookup {
         typeof(DebugLogComponent),
         typeof(HeroComponent),
         typeof(isDroppedComponent),
+        typeof(isPlayerComponent),
         typeof(isTaken2BattleComponent),
         typeof(ItemComponent),
         typeof(ItemInBagComponent),
         typeof(ItemIndexComponent),
+        typeof(LifetimeComponent),
+        typeof(PhyexpComponent),
+        typeof(PhylevelComponent),
         typeof(PositionComponent),
         typeof(SkillComponent),
+        typeof(SkillInBagComponent),
         typeof(SkillIndexComponent),
         typeof(SpeedComponent),
+        typeof(SpexpComponent),
+        typeof(SplevelComponent),
         typeof(SpriteComponent),
         typeof(VelocityComponent),
         typeof(ViewComponent)

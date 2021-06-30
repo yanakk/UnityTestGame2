@@ -46,11 +46,18 @@ public class ItemOnClick: MonoBehaviour, IPointerClickHandler
 
         foreach (GameEntity e in _items)
         {
-            if (e.itemIndex.id == now_iid)
+            if (e.hasItemIndex && e.itemIndex.id == now_iid)
             {
                 if(count <= BItemNum-1) e.ReplaceisTaken2Battle(!e.isTaken2Battle.istaken2battle);      // 一定要用replace
                 else if (e.isTaken2Battle.istaken2battle) e.ReplaceisTaken2Battle(!e.isTaken2Battle.istaken2battle);    // 超数时只能减少
                 //e.ReplaceisTaken2Battle(!e.isTaken2Battle.istaken2battle);
+                break;
+            }
+
+            if (e.hasSkillIndex && e.skillIndex.id == now_iid)
+            {
+                if (count <= BItemNum - 1) e.ReplaceisTaken2Battle(!e.isTaken2Battle.istaken2battle);      // 一定要用replace
+                else if (e.isTaken2Battle.istaken2battle) e.ReplaceisTaken2Battle(!e.isTaken2Battle.istaken2battle);    // 超数时只能减少
                 break;
             }
         }

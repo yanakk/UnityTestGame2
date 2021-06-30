@@ -73,7 +73,7 @@ public class BagManager : MonoBehaviour
 
             foreach (GameEntity e in _items)
             {
-                if (e.itemIndex.id == now_iid)
+                if (e.hasItemIndex && e.itemIndex.id == now_iid)
                 {
                     GameEntity now_item = e;    // 要放入背包的物品
                     CreateNewItem(now_item, num, instance.slotGrid);
@@ -108,7 +108,7 @@ public class BagManager : MonoBehaviour
 
             foreach (GameEntity e in _items)
             {
-                if (e.itemIndex.id == now_iid)
+                if (e.hasItemIndex && e.itemIndex.id == now_iid)
                 {
                     GameEntity now_item = e;
                     if (e.hasisTaken2Battle && e.isTaken2Battle.istaken2battle) CreateNewItem(now_item, num, instance.Grid_item4battle);

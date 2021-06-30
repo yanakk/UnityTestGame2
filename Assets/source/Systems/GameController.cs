@@ -25,7 +25,9 @@ public class GameController : MonoBehaviour
         return new Feature("Systems")
             .Add(new ViewSystems(contexts))
             .Add(new HeroSystem(contexts))
-            .Add(new ItemSystems(contexts));
+            .Add(new ItemSystems(contexts))
+            .Add(new SkillSystems(contexts))
+            .Add(new LevelSystems(contexts));
     }
 
     public static Contexts GetContext()

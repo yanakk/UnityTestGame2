@@ -63,7 +63,7 @@ public sealed class isDroppedComponent : IComponent
 [Game]
 public sealed class isTaken2BattleComponent : IComponent
 {
-    public bool istaken2battle; //  装备是否带入了战斗物品栏中。不能带入则无值
+    public bool istaken2battle; //  装备/技能是否带入了战斗物品栏中。不能带入则无值
 }
 
 [Game]
@@ -79,6 +79,7 @@ public sealed class ItemIndexComponent : IComponent
     public int id;
 }
 
+
 [Game]
 public sealed class SkillIndexComponent : IComponent
 {
@@ -90,6 +91,13 @@ public sealed class SkillComponent : IComponent
 {
     public string name;
 }
+
+[Game]
+public sealed class SkillInBagComponent : IComponent
+{
+    public List<Vector2> SkillInBagList; // c_id, skill_id
+}
+
 
 [Game]
 public sealed class CharacterIndexComponent : IComponent
@@ -110,6 +118,54 @@ public sealed class CharacterGenderComponent : IComponent
     public int gender;  // 0-male  1-female
 }
 
+[Game]
+public sealed class isPlayerComponent : IComponent
+{
+    public bool isplayer;
+}
+
+[Game]
+public sealed class LifetimeComponent : IComponent
+{
+    public double lifetime;
+}
+
+// 经验和等级
+/*[Game]
+public sealed class EAComponent : IComponent
+{
+    public double ea_mental;    // 金灵根
+    public double ea_wood;    // 木灵根
+    public double ea_water;    // 水灵根
+    public double ea_fire;    // 火灵根
+    public double ea_earth;    // 土灵根
+}*/
+
+[Game]
+public sealed class SpexpComponent : IComponent
+{
+    public double spexp;
+}
+
+[Game]
+public sealed class SplevelComponent : IComponent
+{
+    public int splevel;
+}
+
+[Game]
+public sealed class PhyexpComponent : IComponent
+{
+    public double phyexp;
+}
+
+[Game]
+public sealed class PhylevelComponent : IComponent
+{
+    public int phylevel;
+}
+
+//
 [Game]
 public sealed class DebugLogComponent : IComponent
 {
